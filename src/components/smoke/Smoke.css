@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(43, 43, 43);
+  overflow-y: hidden;
+}
+
+canvas {
+  display: block;
+  position: relative;
+  margin: auto;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left 0%,
+    left bottom,
+    from(rgba(0, 0, 0, 0)),
+    to(rgba(0, 0, 0, 1))
+  );
+}
+
+.smoke {
+  position: relative;
+  margin: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  line-height: 100vh;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 4em;
+  color: #b2b2b2;
+}
