@@ -6,30 +6,82 @@ import Navbar from "./components/navbar/Navbar";
 import SideDrawer from "./components/sidedrawer/SideDrawer";
 import Backdrop from "./components/backdrop/Backdrop";
 
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import Home from "./pages/home/Home";
+import Projects from "./pages/projects/Projects";
+import Artwork from "./pages/artwork/Artwork";
+import Resume from "./pages/resume/Resume";
+import Contact from "./pages/contact/Contact";
+
 class App extends Component {
+  state = {
+    sideDrawerOpen: false,
+    particlesOpen: false,
+    scrolled: false
+  };
+
+  /* Scrolling Controller */
+  componentDidMount() {
+    window.addEventListener("scroll", this.onScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.onScroll);
+  }
+
+  onScroll = () => {
+    if (window.pageYOffset !== 0) {
+      this.setState({ scrolled: true });
+    } else {
+      this.setState({ scrolled: false });
+    }
+  };
+
+  drawerToggleClickHandler = () => {
+    this.setState(prevState => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
+    });
+  };
+
+  backdropClickHandler = () => {
+    this.setState({ sideDrawerOpen: false, particlesOpen: false });
+  };
+
   render() {
+    let backdrop = this.state.sideDrawerOpen ? (
+      <Backdrop backdropClick={this.backdropClickHandler} />
+    ) : null;
+
+    const routes = [
+      { path: "/", Component: Home },
+      { path: "/projects", Component: Projects },
+      { path: "/artwork", Component: Artwork },
+      { path: "/resume", Component: Resume },
+      { path: "/contact", Component: Contact }
+    ];
+
     return (
       <div className="App">
-        {/*
-      <Cloud />
-      */}
-        <div className="section1">
-          <img src="https://loremflickr.com/100/300" />
-          <div className="text">
-            <h1>Dahee Kwon</h1>
-            <p>
-              Hi — I am a software developer and artist currently studying at
-              Columbia University.
-            </p>
-          </div>
-        </div>
-        <div className="section2">
-          <img src="https://loremflickr.com/300/400" />
-          <p>
-            I was born in Seoul, have lived in San Diego, Lawrenceville, London,
-            and am currently living in New York.
-          </p>
-        </div>
+        <Router>
+          <Navbar
+            scrolled={this.state.scrolled}
+            drawerClickHandler={this.drawerToggleClickHandler}
+            drawerOpen={this.state.sideDrawerOpen}
+            style={{ zIndex: 100 }}
+          />
+          <SideDrawer
+            show={this.state.sideDrawerOpen}
+            drawerClickHandler={this.drawerToggleClickHandler}
+            drawerOpen={this.state.sideDrawerOpen}
+          />
+          {backdrop}
+          {routes.map(({ path, Component }) => (
+            <Route key={path} exact path={path} component={Component}>
+              {/*<Component />*/}
+            </Route>
+          ))}
+        </Router>
       </div>
     );
   }

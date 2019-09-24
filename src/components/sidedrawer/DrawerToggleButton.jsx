@@ -1,9 +1,3 @@
-/* Drawer Toggle Button Component
- * This component allows the opening of the side nav bar
- * when in mobile view instead of the navigation bar at
- * the top of the page in web view
- */
-
 import React, { Component } from "react";
 import "./DrawerToggleButton.css";
 

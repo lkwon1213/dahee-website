@@ -1,0 +1,36 @@
+.toolbar {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
+  font-family: "Roboto", Arial, sans-serif;
+  letter-spacing: 3.5px;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 10px;
+  z-index: 2;
+}
+.toolbar a {
+  text-decoration: none;
+  color: #f1dabf;
+}
+.toolbar-nav-items {
+  align-self: top;
+  margin-top: 3vh;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toolbar-toggle-button {
+  margin-top: 3vh;
+  margin-right: 3vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

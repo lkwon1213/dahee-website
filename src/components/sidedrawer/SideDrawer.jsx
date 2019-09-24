@@ -1,14 +1,7 @@
-/* Side Drawer Component
- * This component is the navigation that opens
- * from the side in mobile view.
- * Only to be activated in mobile view when
- * the Drawer Toggle Button is clicked.
- */
-
 import React, { Component } from "react";
 import "./SideDrawer.css";
 
-import DrawerToggleButton from "../sidedrawer/DrawerToggleButton";
+import DrawerToggleButton from "./DrawerToggleButton";
 import { NavLink } from "react-router-dom";
 
 class SideDrawer extends Component {
@@ -28,19 +21,19 @@ class SideDrawer extends Component {
         </div>
         <ul>
           <li>
-            <NavLink to="/home">Home</NavLink>
+            <NavLink to="/">HOME</NavLink>
           </li>
           <li>
-            <NavLink to="/aboutus">About Us</NavLink>
+            <NavLink to="/projects">PROJECTS</NavLink>
           </li>
           <li>
-            <NavLink to="/product">Product</NavLink>
+            <NavLink to="/artwork">ARTWORK</NavLink>
           </li>
           <li>
-            <NavLink to="/careers">Careers</NavLink>
+            <NavLink to="/resume">RESUME</NavLink>
           </li>
           <li>
-            <NavLink to="/contactus">Contact Us</NavLink>
+            <NavLink to="/contact">CONTACT</NavLink>
           </li>
         </ul>
       </nav>

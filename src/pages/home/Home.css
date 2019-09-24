@@ -1,0 +1,48 @@
+.section1 {
+  width: 70vw;
+  height: 75vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-top: 12vh;
+  margin-bottom: 12vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #11151c;
+}
+.section1 img {
+  margin-left: 5vw;
+}
+.section1 .text {
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section1 .text h1 {
+  width: 20vw;
+}
+.section1 .text p {
+  width: 20vw;
+  margin-left: 8vw;
+  margin-top: 1vw;
+}
+
+.section2 {
+  width: 70vw;
+  height: 95vh;
+  padding-top: 5vw;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.section2 p {
+  width: 50vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}

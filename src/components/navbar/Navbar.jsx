@@ -8,7 +8,7 @@ import DrawerToggleButton from "../sidedrawer/DrawerToggleButton";
 class Navbar extends Component {
   render() {
     const burger =
-      this.props.scrolled === false ? (
+      this.props.scrolled === true ? (
         <div className="toolbar-toggle-button">
           <DrawerToggleButton
             drawerOpen={this.props.drawerOpen}
@@ -16,53 +16,46 @@ class Navbar extends Component {
           />
         </div>
       ) : null;
+    const navigation =
+      this.props.scrolled === false ? (
+        <div className="toolbar-nav-items">
+          <div>
+            <NavLink className="underbar" activeClassName="color" to="/">
+              HOME
+            </NavLink>
+          </div>
+          <div>
+            <NavLink
+              className="underbar"
+              activeClassName="color"
+              to="/projects"
+            >
+              PROJECTS
+            </NavLink>
+          </div>
+          <div>
+            <NavLink className="underbar" activeClassName="color" to="/artwork">
+              ARTWORK
+            </NavLink>
+          </div>
+          <div>
+            <NavLink className="underbar" activeClassName="color" to="/resume">
+              RESUME
+            </NavLink>
+          </div>
+          <div>
+            <NavLink className="underbar" activeClassName="color" to="/contact">
+              CONTACT
+            </NavLink>
+          </div>
+        </div>
+      ) : null;
+
     return (
       <header className="toolbar">
         <nav className="toolbar-nav">
           {burger}
-          <div className="toolbar-nav-items">
-            <div>
-              <NavLink className="underbar" activeClassName="color" to="/">
-                HOME
-              </NavLink>
-            </div>
-            <div>
-              <NavLink
-                className="underbar"
-                activeClassName="color"
-                to="/projects"
-              >
-                PROJECTS
-              </NavLink>
-            </div>
-            <div>
-              <NavLink
-                className="underbar"
-                activeClassName="color"
-                to="/artwork"
-              >
-                ARTWORK
-              </NavLink>
-            </div>
-            <div>
-              <NavLink
-                className="underbar"
-                activeClassName="color"
-                to="/resume"
-              >
-                RESUME
-              </NavLink>
-            </div>
-            <div>
-              <NavLink
-                className="underbar"
-                activeClassName="color"
-                to="/contact"
-              >
-                CONTACT
-              </NavLink>
-            </div>
-          </div>
+          {navigation}
         </nav>
       </header>
     );
