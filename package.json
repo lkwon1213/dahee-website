@@ -7,7 +7,7 @@
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.2",
-    "smoke-effect-react": "^1.0.5",
+    "smoke-effect-react": "github:hsyuting/smoke-effect-react",
     "stats": "^1.0.0",
     "three": "^0.108.0"
   },

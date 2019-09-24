@@ -8,6 +8,15 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
+        <div className="cloud">
+          <Cloud
+            width="70vw"
+            height="75vh"
+            opacity="10"
+            smokeSrc="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png"
+            smokeOpacity="0.7"
+          />
+        </div>
         <div className="section1">
           <img src="https://loremflickr.com/100/300" />
           <div className="text">
