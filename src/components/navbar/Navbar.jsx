@@ -4,6 +4,7 @@ import "./Navbar.css";
 /* Import Components */
 import { NavLink } from "react-router-dom";
 import DrawerToggleButton from "../sidedrawer/DrawerToggleButton";
+import Resume from "../../pages/resume/LillyDaheeKwonResume.pdf";
 
 class Navbar extends Component {
   render() {
@@ -39,7 +40,12 @@ class Navbar extends Component {
             </NavLink>
           </div>
           <div>
-            <NavLink className="underbar" activeClassName="color" to="/resume">
+            <NavLink
+              className="underbar"
+              activeClassName="color"
+              to={Resume}
+              target="_blank"
+            >
               RESUME
             </NavLink>
           </div>

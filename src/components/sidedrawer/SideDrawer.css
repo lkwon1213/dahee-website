@@ -1,54 +1,56 @@
 .side-drawer {
+  width: 40%;
   height: 100%;
-  background: #c9cebd;
+  background: black;
   box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   right: 0;
-  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   z-index: 200;
   transform: translateX(100%);
-  transition: transform 0.5s ease-out;
-  font-family: "Roboto", Arial, sans-serif;
-  letter-spacing: 3.5px;
-  font-weight: normal;
-  font-style: normal;
-  text-transform: uppercase;
-  font-size: 11px;
+  transition: transform 1s ease-out;
 }
 .side-drawer ul {
-  height: 50%;
+  width: 100%;
+  height: 80%;
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 1rem;
+  align-items: center;
   padding: 0;
 }
 .side-drawer li {
-  /*margin: 1rem 1rem 0 1rem; */
-  margin-top: 1rem;
-  font-size: 12px;
+  margin-top: 3rem;
+}
+.side-drawer .linktext {
+  color: #af3524;
+  font-family: "monarcha", serif;
+  font-weight: 00;
+  font-style: normal;
+  font-size: 40px;
+  text-transform: uppercase;
   text-align: left;
   list-style: none;
-  color: white;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 .side-drawer.open {
   transform: translateX(0%);
 }
 
-.side-drawer a:hover,
-.side-drawer a:active {
-  color: red;
-}
-
 .drawer-toggle-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 3vh;
+  margin-right: 3vw;
   display: flex;
   justify-content: flex-end;
-  padding: 1.5rem;
 }
 @media (min-width: 769px) {
 }

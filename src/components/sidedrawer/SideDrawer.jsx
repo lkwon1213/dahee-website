@@ -3,6 +3,7 @@ import "./SideDrawer.css";
 
 import DrawerToggleButton from "./DrawerToggleButton";
 import { NavLink } from "react-router-dom";
+import Resume from "../../pages/resume/LillyDaheeKwonResume.pdf";
 
 class SideDrawer extends Component {
   state = {};
@@ -21,19 +22,29 @@ class SideDrawer extends Component {
         </div>
         <ul>
           <li>
-            <NavLink to="/">HOME</NavLink>
+            <NavLink className="linktext" to="/">
+              HOME
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/projects">PROJECTS</NavLink>
+            <NavLink className="linktext" to="/projects">
+              PROJECTS
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/artwork">ARTWORK</NavLink>
+            <NavLink className="linktext" to="/artwork">
+              ARTWORK
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/resume">RESUME</NavLink>
+            <NavLink className="linktext" to={Resume} target="_blank">
+              RESUME
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/contact">CONTACT</NavLink>
+            <NavLink className="linktext" to="/contact">
+              CONTACT
+            </NavLink>
           </li>
         </ul>
       </nav>

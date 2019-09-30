@@ -11,7 +11,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Projects from "./pages/projects/Projects";
 import Artwork from "./pages/artwork/Artwork";
-import Resume from "./pages/resume/Resume";
 import Contact from "./pages/contact/Contact";
 
 class App extends Component {
@@ -57,7 +56,6 @@ class App extends Component {
       { path: "/", Component: Home },
       { path: "/projects", Component: Projects },
       { path: "/artwork", Component: Artwork },
-      { path: "/resume", Component: Resume },
       { path: "/contact", Component: Contact }
     ];
 
