@@ -36,8 +36,7 @@ class Home extends Component {
             <p>
               My interests are in web development and more recently, computer
               vision. I have worked on projects that span from front end
-              development, UI design, GUI development, and game development. As
-              both a designer and an engineer,
+              development, UI design, GUI development, and game development.
             </p>
           </div>
         </div>
