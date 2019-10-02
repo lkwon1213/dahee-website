@@ -22,12 +22,12 @@ class SideDrawer extends Component {
         </div>
         <ul>
           <li>
-            <NavLink className="linktext" to="dahee-website/">
+            <NavLink className="linktext" to="/">
               HOME
             </NavLink>
           </li>
           <li>
-            <NavLink className="linktext" to="dahee-website/projects">
+            <NavLink className="linktext" to="/projects">
               PROJECTS
             </NavLink>
           </li>

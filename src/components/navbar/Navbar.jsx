@@ -21,10 +21,7 @@ class Navbar extends Component {
       this.props.scrolled === false ? (
         <div className="toolbar-nav-items">
           <div>
-            <NavLink
-              /*className="underbar"*/ activeClassName="color"
-              to="dahee-website/"
-            >
+            <NavLink /*className="underbar"*/ activeClassName="color" to="/">
               HOME
             </NavLink>
           </div>
@@ -32,7 +29,7 @@ class Navbar extends Component {
             <NavLink
               /*className="underbar"*/
               activeClassName="color"
-              to="dahee-website/projects"
+              to="/projects"
             >
               PROJECTS
             </NavLink>

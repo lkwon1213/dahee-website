@@ -53,15 +53,15 @@ class App extends Component {
     ) : null;
 
     const routes = [
-      { path: "dahee-website/", Component: Home },
-      { path: "dahee-website/projects", Component: Projects },
-      { path: "dahee-website/artwork", Component: Artwork },
-      { path: "dahee-website/contact", Component: Contact }
+      { path: "/", Component: Home },
+      { path: "/projects", Component: Projects },
+      { path: "/artwork", Component: Artwork },
+      { path: "/contact", Component: Contact }
     ];
 
     return (
       <div className="App">
-        <Router>
+        <Router basename="/dahee-website">
           <Navbar
             scrolled={this.state.scrolled}
             drawerClickHandler={this.drawerToggleClickHandler}
