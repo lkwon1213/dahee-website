@@ -53,10 +53,10 @@ class App extends Component {
     ) : null;
 
     const routes = [
-      { path: "/", Component: Home },
-      { path: "/projects", Component: Projects },
-      { path: "/artwork", Component: Artwork },
-      { path: "/contact", Component: Contact }
+      { path: "dahee-website/", Component: Home },
+      { path: "dahee-website/projects", Component: Projects },
+      { path: "dahee-website/artwork", Component: Artwork },
+      { path: "dahee-website/contact", Component: Contact }
     ];
 
     return (
