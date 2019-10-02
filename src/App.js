@@ -12,6 +12,7 @@ import Home from "./pages/home/Home";
 import Projects from "./pages/projects/Projects";
 import Artwork from "./pages/artwork/Artwork";
 import Contact from "./pages/contact/Contact";
+import Resume from "./pages/resume/LillyDaheeKwonResume.pdf";
 
 class App extends Component {
   state = {

@@ -45,14 +45,13 @@ class Navbar extends Component {
           </div>
            */}
           <div>
-            <NavLink
+            <a
               /*className="underbar"*/
-              activeClassName="color"
-              to={Resume}
+              href={Resume}
               target="_blank"
             >
               RESUME
-            </NavLink>
+            </a>
           </div>
           {/*
           <div>

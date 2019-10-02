@@ -38,9 +38,9 @@ class SideDrawer extends Component {
             </NavLink>
           </li>*/}
           <li>
-            <NavLink className="linktext" to={Resume} target="_blank">
+            <a className="linktext" href={Resume} target="_blank">
               RESUME
-            </NavLink>
+            </a>
           </li>
           {/*
           <li>
