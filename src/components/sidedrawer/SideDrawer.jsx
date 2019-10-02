@@ -31,21 +31,23 @@ class SideDrawer extends Component {
               PROJECTS
             </NavLink>
           </li>
+          {/*
           <li>
             <NavLink className="linktext" to="/artwork">
               ARTWORK
             </NavLink>
-          </li>
+          </li>*/}
           <li>
             <NavLink className="linktext" to={Resume} target="_blank">
               RESUME
             </NavLink>
           </li>
+          {/*
           <li>
             <NavLink className="linktext" to="/contact">
               CONTACT
             </NavLink>
-          </li>
+          </li>*/}
         </ul>
       </nav>
     );

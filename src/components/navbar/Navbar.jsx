@@ -21,27 +21,32 @@ class Navbar extends Component {
       this.props.scrolled === false ? (
         <div className="toolbar-nav-items">
           <div>
-            <NavLink className="underbar" activeClassName="color" to="/">
+            <NavLink /*className="underbar"*/ activeClassName="color" to="/">
               HOME
             </NavLink>
           </div>
           <div>
             <NavLink
-              className="underbar"
+              /*className="underbar"*/
               activeClassName="color"
               to="/projects"
             >
               PROJECTS
             </NavLink>
           </div>
+          {/*}
           <div>
-            <NavLink className="underbar" activeClassName="color" to="/artwork">
+            <NavLink
+              className="underbar" activeClassName="color"
+              to="/artwork"
+            >
               ARTWORK
             </NavLink>
           </div>
+           */}
           <div>
             <NavLink
-              className="underbar"
+              /*className="underbar"*/
               activeClassName="color"
               to={Resume}
               target="_blank"
@@ -49,11 +54,15 @@ class Navbar extends Component {
               RESUME
             </NavLink>
           </div>
+          {/*
           <div>
-            <NavLink className="underbar" activeClassName="color" to="/contact">
+            <NavLink
+              /*className="underbar" activeClassName="color"
+              to="/contact"
+            >
               CONTACT
             </NavLink>
-          </div>
+          </div>*/}
         </div>
       ) : null;
 

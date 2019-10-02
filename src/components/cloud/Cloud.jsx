@@ -20,19 +20,19 @@ export default class Cloud extends Component {
     this.scene.add(this.camera);
     let geometry = new THREE.BoxGeometry(200, 200, 200);
     let material = new THREE.MeshLambertMaterial({
-      color: 0xaa6666,
+      color: 0xcdd3c0,
       wireframe: false
     });
 
     this.mesh = new THREE.Mesh(geometry, material);
     this.cubeSineDriver = 0;
     let textGeo = new THREE.PlaneGeometry(300, 300);
-
+    /*
     let textTexture = new THREE.TextureLoader().load(
       this.props.src,
       textTexture => {
         let textMaterial = new THREE.MeshLambertMaterial({
-          color: 0x151219,
+          color: 0xffffff,
           opacity: this.props.opacity,
           map: textTexture,
           transparent: true,
@@ -47,9 +47,9 @@ export default class Cloud extends Component {
         console.log("load failed.");
         console.log(err);
       }
-    );
+    );*/
 
-    let light = new THREE.DirectionalLight(0xffffff, 0.5);
+    let light = new THREE.DirectionalLight(0xffffff, 4.5);
     light.position.set(-1, 0, 1);
     this.scene.add(light);
     this.smokeParticles = [];
@@ -57,7 +57,7 @@ export default class Cloud extends Component {
       this.props.smokeSrc,
       smokeTexture => {
         let smokeMaterial = new THREE.MeshLambertMaterial({
-          color: 0xf1dabf,
+          color: 0xf4dbd4,
           map: smokeTexture,
           opacity: this.props.smokeOpacity,
           transparent: true
@@ -104,6 +104,7 @@ export default class Cloud extends Component {
     this.cubeSineDriver += 0.01;
     this.mesh.position.z = 100 + Math.sin(this.cubeSineDriver) * 500;
     this.renderer.render(this.scene, this.camera);
+    this.renderer.setClearColor(0xe0aea6, 1);
   };
 
   evolveSmoke = () => {
