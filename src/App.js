@@ -62,7 +62,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Router basename="/dahee-website">
+        <Router>
           <Navbar
             scrolled={this.state.scrolled}
             drawerClickHandler={this.drawerToggleClickHandler}
