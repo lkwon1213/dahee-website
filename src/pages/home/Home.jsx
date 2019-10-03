@@ -13,8 +13,8 @@ class Home extends Component {
       <div className="home">
         <div className="cloud">
           <Cloud
-            width="100vw"
-            height="100vh"
+            width="90vw"
+            height="84vh"
             smokeSrc="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png"
             smokeOpacity="0.3"
           />
