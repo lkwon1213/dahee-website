@@ -54,6 +54,25 @@ class OneProject extends Component {
         </div>
       );
     }
+    positioning = (
+      <div className="oneproject" style={{ backgroundColor: this.props.color }}>
+        <Tilt
+          className="Tilt"
+          options={{
+            max: 17,
+            scale: 1,
+            easing: "cubic-bezier(.03,.98,.52,.99)"
+          }}
+        >
+          <img src={this.props.image} />
+        </Tilt>
+        <div className="text">
+          <h2>{this.props.name}</h2>
+          <h5>{this.props.keywords}</h5>
+          <p>{this.props.description}</p>
+        </div>
+      </div>
+    );
     return (
       <Tilt
         options={{

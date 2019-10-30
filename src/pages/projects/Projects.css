@@ -1,14 +1,20 @@
 .projects {
   width: 100vw;
-  height: 400vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 .projects h1 {
-  margin-top: 20vh;
-  margin-bottom: 20vh;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+}
+.proj-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 600px) {
