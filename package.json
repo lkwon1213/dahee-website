@@ -12,7 +12,7 @@
     "react-tilt": "^0.1.4",
     "smoke-effect-react": "github:hsyuting/smoke-effect-react",
     "stats": "^1.0.0",
-    "three": "^0.108.0"
+    "three": "^0.125.0"
   },
   "scripts": {
     "predeploy": "npm run build",
